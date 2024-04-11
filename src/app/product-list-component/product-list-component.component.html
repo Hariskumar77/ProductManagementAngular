@@ -1,43 +1,6 @@
-  <!-- <div class="product-header">
-    <div class="product-header-text">
-      List of Products -{{ product1.length }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;PRODUCT MANAGEMENT SYSTEM
-    </div>
-    <div class="product-header-buttons">
-      <button class="product-header-button" (click)="openAddProductDialog()">Add Product</button>
-      <button class="generatePDF product-header-button" (click)="generatePDF()">Generate PDF</button>
-      <button class="generateExcel product-header-button" (click)="generateExcel('product','products')">Generate Excel</button>
-    </div>
-  </div>
-  
-  <div [ngClass]="product1.length ? 'table-container' : 'not-found'" class="table-container" style="border: 0px solid black;">
-    <img *ngIf="!product1.length" id="nothing" src="../../assets/nothing.png" width="400" height="400"/>
-    <div *ngIf="!product1.length">No Records Found</div>
-  
-    <table id="product" #product class="flex-table">
-      <thead *ngIf="product1.length" style="position: sticky; top: 0px; background-color: white; z-index: 1;">
-        <tr style="background-color: #9f9f9f;">
-          <th>Product Id</th>
-          <th>Product Name</th>
-          <th>Description</th>
-          <th>Price</th>
-          <th>Delete</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let p of product1" >
-          <td (click)="openProductDetailsModal(p)">{{ p.productId }}</td>
-          <td (click)="openProductDetailsModal(p)">{{ p.productName }}</td>
-          <td (click)="openProductDetailsModal(p)">{{ p.description }}</td>
-          <td (click)="openProductDetailsModal(p)">{{ p.price }}</td>
-          <td><button class="product-header-button" (click)="deleteProduct(p.productId)">Delete Product</button> </td>
-        </tr>
-      </tbody>
-    </table>
-  </div> -->
-
   <div class="product-header">
     <div class="product-header-text">
-      List of Products -{{ filteredProducts.length }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;PRODUCT MANAGEMENT SYSTEM
+      List of Products - {{ filteredProducts.length }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;Product Management System
     </div>
     <div class="product-header-buttons">
       <button class="product-header-button" (click)="openAddProductDialog()">Add Product</button>
@@ -47,10 +10,7 @@
 
     </div>
   </div>
-  
-  <!-- <div class="filter-container">
-  </div> -->
-  
+
   <div [ngClass]="filteredProducts.length ? 'table-container' : 'not-found'" class="table-container" style="border: 0px solid black;">
     <img *ngIf="!filteredProducts.length" id="nothing" src="../../assets/nothing.png" width="400" height="400"/>
     <div *ngIf="!filteredProducts.length">No Records Found</div>
@@ -60,7 +20,6 @@
         <tr style="background-color: #9f9f9f;">
           <th>Product Id</th>
           <th>Product Name</th>
-          <!-- <th>Manufactured Date</th> -->
           <th>Description</th>
           <th>Price</th>
           <th>Delete</th>
@@ -70,7 +29,6 @@
         <tr *ngFor="let p of filteredProducts">
           <td (click)="openProductDetailsModal(p)">{{ p.productId }}</td>
           <td (click)="openProductDetailsModal(p)">{{ p.productName }}</td>
-          <!-- <td>{{ p.manufacturedDate | date }}</td> -->
           <td (click)="openProductDetailsModal(p)">{{ p.description }}</td>
           <td (click)="openProductDetailsModal(p)">{{ p.price }}</td>
           <td><button class="product-header-button" (click)="deleteProduct(p.productId)">Delete Product</button> </td>
