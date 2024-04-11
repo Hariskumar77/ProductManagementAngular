@@ -117,6 +117,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Product } from '../product.model';
 import { ProductService } from '../product.service';
 import { MatDialogRef } from '@angular/material/dialog';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 
 function priceValidator(control) {
@@ -130,7 +131,19 @@ function priceValidator(control) {
 @Component({
   selector: 'app-product-add-component',
   templateUrl: './product-add-component.component.html',
-  styleUrls: ['./product-add-component.component.css']
+  styleUrls: ['./product-add-component.component.css'],
+
+  animations: [
+    trigger('fadeInOut', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('300ms ease-out', style({ opacity: 1 })),
+      ]),
+      transition(':leave', [
+        animate('300ms ease-in', style({ opacity: 0 })),
+      ]),
+    ]),
+  ],
 })
 export class ProductAddComponentComponent implements OnInit {
   productForm: FormGroup;

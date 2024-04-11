@@ -20,7 +20,7 @@
   </div>
    -->
 
-   <div class="modal-container">
+   <div class="modal-container" [@fadeInOut]>
     <div class="container">
       <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
         <label for="productName">Product Name:</label>

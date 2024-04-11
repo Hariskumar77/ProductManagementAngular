@@ -25,7 +25,8 @@ import { ProductDetailsComponentComponent } from './product-details-component/pr
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    BrowserAnimationsModule,
   ],
   providers: [ProductService],
   entryComponents: [ProductAddComponentComponent], 
