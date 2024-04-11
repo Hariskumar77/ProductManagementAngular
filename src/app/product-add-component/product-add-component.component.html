@@ -1,0 +1,42 @@
+<!-- 
+<div class="modal-container">
+    <div class="container">
+        <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+            <label for="productName">Product Name:</label>
+            <input type="text" formControlName="productName" required><br>
+            
+            <label for="description">Description:</label>
+            <textarea formControlName="description" required></textarea><br>
+            
+            <label for="price">Price:</label>
+            <input type="number" formControlName="price" required><br>
+            
+            <label for="manufacturedDate">Manufactured Date:</label>
+            <input type="date" formControlName="manufacturedDate" required><br>
+            
+            <button type="submit" [disabled]="productForm.invalid">Add Product</button>
+          </form>
+    </div>
+  </div>
+   -->
+
+   <div class="modal-container">
+    <div class="container">
+      <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <label for="productName">Product Name:</label>
+        <input type="text" formControlName="productName" required><br>
+        
+        <label for="description">Description:</label>
+        <textarea formControlName="description" required></textarea><br>
+        
+        <label for="price">Price:</label>
+        <input type="number" formControlName="price" required (input)="checkNegativePrice($event.target.value)"><br>
+        
+        <label for="manufacturedDate">Manufactured Date:</label>
+        <input type="date" formControlName="manufacturedDate" required><br>
+        
+        <button type="submit" [disabled]="productForm.invalid">Add Product</button>
+      </form>
+    </div>
+  </div>
+  

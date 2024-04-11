@@ -1,0 +1,27 @@
+<div class="modal-container">
+<br>
+<h2>{{product.productName }}</h2>
+    <table class="c1">
+      <tr>
+        <td><strong>Product ID:</strong></td>
+        <td>{{ product.productId }}</td>
+      </tr>
+      <tr>
+        <td><strong>Product Name:</strong></td>
+        <td>{{product.productName }}</td>
+      </tr>
+      <tr>
+        <td><strong>Description:</strong></td>
+        <td>{{ product.description }}</td>
+      </tr>
+      <tr>
+        <td><strong>Manufactured Date:</strong></td>
+        <td>{{ product.manufacturedDate | date }}</td>
+      </tr>
+      <tr>
+        <td><strong>Price:</strong></td>
+        <td>{{ product.price }}</td>
+      </tr>
+    </table>
+  </div>
+  
